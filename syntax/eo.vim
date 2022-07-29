@@ -32,7 +32,7 @@ syntax match eoOperator "\v-\="
 
 " Numbers
 syntax match eoInteger "\v[+-]?\d+|0x[a-f\d]+"
-syntax match eoFloat   "\v/[+-]?\d+(\.\d+)?/e(+|-)?\d+/"
+" syntax match eoFloat   "\v/[+-]?\d+(\.\d+)?/e(+|-)?\d+/"
 " syntax match swiftNumber "\v<\d+>"
 
 " Set highlight 
@@ -45,4 +45,4 @@ hi def link eoOperator Operator
 
 highlight Number ctermfg=Green guifg=Green
 hi def link eoInteger Number
-hi def link eoFloat Number
+" hi def link eoFloat Number
