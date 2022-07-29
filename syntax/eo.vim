@@ -31,13 +31,16 @@ syntax match eoOperator "\v\+\="
 syntax match eoOperator "\v-\="
 
 " Numbers
-syntax match eoInteger "\v[+-]?\d+|0x[a-f\d]+"
-" syntax match eoFloat   "\v/[+-]?\d+(\.\d+)?/e(+|-)?\d+/"
-" syntax match swiftNumber "\v<\d+>"
+syntax match eoInteger "\v<\d+>" "\v[+-]?\d+|0x[a-f\d]+
+syntax match eoFloat   "\v<\d+\.\d+>" "\v/[+-]?\d+(\.\d+)?/e(+|-)?\d+/
+"syntax match eoExp "\v<\d*\.?\d+([Ee]-?)?\d+>"
+"syntax match eoNumber "\v<0x\x+([Pp]-?)?\x+>"
+"syntax match eoNumber "\v<0b[01]+>"
+"syntax match eoNumber "\v<0o\o+>"
 
 " Set highlight 
 hi def link eoKeyword Keyword
-hi def link eoString String
+hi def link eoString  String
 hi def link eoComment Comment
 
 highlight Operator ctermfg=Red guifg=Red
@@ -45,4 +48,5 @@ hi def link eoOperator Operator
 
 highlight Number ctermfg=Green guifg=Green
 hi def link eoInteger Number
-" hi def link eoFloat Number
+hi def link eoFloat   Number
+hi def link eoNumber  Number
