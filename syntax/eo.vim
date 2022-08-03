@@ -11,7 +11,7 @@
     endif
     
     " Match language specific keywords
-    syntax keyword eoKeyMetas contained alias package
+    syntax keyword eoKeyMetas contained alias package rt version home junit unit
     syntax keyword eoBoolean TRUE FALSE 
     
     " Match String
@@ -25,11 +25,12 @@
     syntax match   eoComment "\v#.*$" contains=todoComment
     
     " Match dot-notation attributes
-    syntax match eoDotName "\v\..*\s|\v\..*\n" contains=eoImpl
+    syntax match eoDotName "\v\.[a-zA-Z_][a-zA-Z0-9_]*" contains=eoOperator 
+    syntax match eoDotName "\v.*\.\s|\v.*\.\n" 
     
     " Name of objects
     syntax match eoDefaultName  "[a-zA-Z_][a-zA-Z0-9_]*" contains=eoDotName 
-    syntax match eoAbstractName "\v\[.*$"
+    syntax match eoAbstractName "\v\[.*$" contains=eoOperator
     
     " Special attributes
     syntax match eoKeyword "\v\&"
@@ -45,9 +46,7 @@
     syntax match eoOperator "\v\>"
     syntax match eoOperator "\v\<"
     syntax match eoOperator "\v\:"
-    
     syntax match eoOperator "\v\="
-    
     syntax match eoOperator "\v\*\="
     syntax match eoOperator "\v/\="
     syntax match eoOperator "\v\+\="
@@ -71,7 +70,7 @@
     hi def link eoString  String
     hi def link eoComment Comment
     
-    highlight DotName ctermfg=LightMagenta guifg=LightMagenta
+    highlight DotName ctermfg=LightBlue guifg=LightBlue
     hi def link eoDotName DotName
     
     highlight Title ctermfg=Green guifg=Green guifg=LightYellow gui=bold cterm=bold
@@ -83,8 +82,10 @@
     hi def link eoKeyMetas Define
     hi def link eoMetas Operator
     
-    hi def link eoOperator NONE
+    " highlight Boolean 
+    hi def link eoOperator  NONE
+    hi def link eoBoolean   Boolean
     hi def link todoComment Todo 
     
     " +|+|+|+|+|+|+|+ End highlight +|+|+|+|+|+|+|+ "
-    let b:current_syntax="eo"
+let b:current_syntax="eo"
