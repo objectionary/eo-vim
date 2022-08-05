@@ -14,6 +14,4 @@ git clone https://github.com/ivan-egorov42/vim-eo
 ``` 
 3rd Step 
 
-Run your EO program with  *.eo  file.
-
-Later will be better implementation of README.
+Open your EO program with  *.eo  file in vim.
