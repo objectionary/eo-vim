@@ -25,11 +25,11 @@
     syntax match   eoComment "\v#.*$" contains=todoComment
     
     " Match dot-notation attributes
-    syntax match eoDotName "\v\.[a-zA-Z_][a-zA-Z0-9_]*" contains=eoOperator 
+    syntax match eoDotName "\v\.[a-zA-Z_][a-zA-Z0-9_||\-]*" contains=eoOperator 
     syntax match eoDotName "\v.*\.\s|\v.*\.\n" 
     
     " Name of objects
-    syntax match eoDefaultName  "[a-zA-Z_][a-zA-Z0-9_]*" contains=eoDotName 
+    syntax match eoDefaultName  "[a-zA-Z_][a-zA-Z0-9_||\-]*" contains=eoDotName 
     syntax match eoAbstractName "\v\[.*$" contains=eoOperator
     
     " Special attributes
@@ -41,7 +41,6 @@
     " Operators
     syntax match eoOperator "\v\*"
     syntax match eoOperator "\v/"
-    syntax match eoOperator "\v-"
     syntax match eoOperator "\v\?"
     syntax match eoOperator "\v\>"
     syntax match eoOperator "\v\<"
