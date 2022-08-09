@@ -2,6 +2,8 @@
 
 ## Features
 
+This plugin adds EO language support for Vim, with the following main features:
+
 * Syntax highlighting
 
 ## Installation
