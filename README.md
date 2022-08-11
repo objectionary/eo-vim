@@ -36,6 +36,23 @@ git clone https://github.com/ivan-egorov42/vim-eo
   * `git clone https://github.com/ivan-egorov42/vim-eo.git ~/.vim/bundle/vim-eo`
   *  add `Plugin 'vim-eo'` to your `~/.vimrc` and run `PluginInstall`.
 
+## Using tabulation
+
+If you use tabs in vim, it is necessary to set the 'expandtab' option: `:set expandtab` due to compiler specifics. Also, the following line will be useful if you don't want to set this every time you start the vim:
+```
+autocmd BufEnter *.eo set ai ts=2 st=2 expandtab
+
+```
+You can add it to your `$HOME/.vimrc` configuration file. This will work only with `.eo` files. 
+
+Arguments `ts` and `st` set number of space characters that will be inserted when the tab key is pressed. You can change it as you wish. 
+
+More information by:
+* :help 'tabstop'
+* :help 'shiftwidth'
+* :help 'expandtab'
+* :help 'softtabstop'
+
 ##  Contributing
 
 All PRs are welcome. If you are planning to contribute a large patch or to integrate a new tool or some features, please create an issue first to get any upfront questions or design decisions out of the way first. Then, you may fork repository, make changes and send us a pull request.
