@@ -26,7 +26,7 @@
     
     " Match dot-notation attributes
     syntax match eoDotName "\v\.[a-zA-Z_][a-zA-Z0-9_||\-]*" contains=eoOperator 
-    syntax match eoDotName "\v.*\.\s|\v.*\.\n" contains=eoMetas
+    syntax match eoDotName "\v.*\.\s|\v.*\.\n" contains=eoMetas,eoString
     
     " Name of objects
     syntax match eoDefaultName  "[a-zA-Z_][a-zA-Z0-9_||\-]*" contains=eoDotName 
