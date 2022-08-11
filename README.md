@@ -36,7 +36,7 @@ git clone https://github.com/ivan-egorov42/vim-eo
   * `git clone https://github.com/ivan-egorov42/vim-eo.git ~/.vim/bundle/vim-eo`
   *  add `Plugin 'vim-eo'` to your `~/.vimrc` and run `PluginInstall`.
 
-## Usage tabulation
+## Using tabulation
 
 If you use tabs in vim, it is necessary to set the 'expandtab' option: `:set expandtab` due to compiler specifics. Also, the following line will be useful if you don't want to set this every time you start the vim:
 ```
