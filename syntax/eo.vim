@@ -26,7 +26,7 @@
     
     " Match dot-notation attributes
     syntax match eoDotName "\v\.[a-zA-Z_][a-zA-Z0-9_||\-]*" contains=eoOperator 
-    syntax match eoDotName "\v.*\.\s|\v.*\.\n" contains=eoMetas,eoString
+    syntax match eoDotName "\v.*\.\s|\v.*\.\n" contains=eoMetas,eoString,eoComment
     
     " Name of objects
     syntax match eoDefaultName  "[a-zA-Z_][a-zA-Z0-9_||\-]*" contains=eoDotName 
@@ -81,7 +81,7 @@
     hi def link eoKeyMetas Define
     hi def link eoMetas Operator
     
-    " highlight Boolean 
+    " highlight default
     hi def link eoOperator  NONE
     hi def link eoBoolean   Boolean
     hi def link todoComment Todo 
