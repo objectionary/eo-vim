@@ -11,5 +11,5 @@ function s:suite.my_test_2()
 endfunction
 
 function s:suite.my_fail_test()
-	  call s:assert.fail('this will fail')
-	endfunction
+  call s:assert.fail('this will fail')
+endfunction
