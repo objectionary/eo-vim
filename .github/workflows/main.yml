@@ -1,0 +1,51 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "master" branch
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+          
+      - name: Setup Vim
+        # You may pin to the exact commit or the version.
+        # uses: rhysd/action-setup-vim@ee29511b85a41466a9cdac48f5416cdac46f9090
+        uses: rhysd/action-setup-vim@v1.2.12
+        with:
+          # Version of Vim or Neovim to install. Valid values are 'stable', 'nightly' or version tag such as 'v8.2.0126'. Note that this value must exactly match to a tag name when installing the specific version.
+
+          version: stable # optional, default is stable
+          # Setting to true will install Neovim.
+
+          neovim: stable # optional
+          # Personal access token for GitHub API. It is used for calling GitHub API when Neovim asset is not found in stable releases and needs to fallback. You don't need to set this input since it is set automatically.
+
+          token: ${{ github.token }} # optional, default is ${{ github.token }}
