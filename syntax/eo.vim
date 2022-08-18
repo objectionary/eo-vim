@@ -5,8 +5,6 @@
 " Version:     0.0.0
 " URL:         
 
-mistake
-
 " Checking for rewriting
     if exists("b:current_syntax")
         finish
