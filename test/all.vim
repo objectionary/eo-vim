@@ -2,18 +2,17 @@ let s:suite = themis#suite('Test for my plugin')
 let s:assert = themis#helper('assert')
 
 " Checking correct running of syntax highlighting script
-" let path = '.'
-
 function! s:source(path) abort
   try
     execute ':source' fnameescape(a:path)
   catch /^Vim\%((\a\+)\)\=:E121:/
-    " NOTE: workaround for `E121: Undefined variable: s:save_cpo`
+    " NOTE: workaround for `E121: Undefined variable: path`
     execute ':source' fnameescape(a:path)
   endtry
 endfunction
 
 call s:source('./syntax/eo.vim')
+call s:source('./ftdetect/eo.vim')
 " These are trial tests for checking CI working
 " They will be expand in the future contributes
 " You are welcome to add them
