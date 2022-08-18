@@ -4,7 +4,7 @@
 [![DevOps By Rultor.com](http://www.rultor.com/b/objectionary/eo)](http://www.rultor.com/p/objectionary/eo)
 
 ![Lines of code](https://img.shields.io/tokei/lines/github/ivan-egorov42/vim-eo)
-![Hits-of-Code](https://hitsofcode.com/github/ivan-egorov42/vim-eo)
+[![Hits-of-Code](https://hitsofcode.com/github/ivan-egorov42/vim-eo)](https://hitsofcode.com/github/ivan-egorov42/vim-eo/view)
 [![CI](https://github.com/ivan-egorov42/vim-eo/actions/workflows/main.yml/badge.svg)](https://github.com/ivan-egorov42/vim-eo/actions/workflows/main.yml)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/objectionary/eo/blob/master/LICENSE.txt)
 
