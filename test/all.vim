@@ -9,3 +9,7 @@ endfunction
 function s:suite.my_test_2()
   call s:assert.equals(8, 2 * 4)
 endfunction
+
+function s:suite.my_fail_test()
+	  call s:assert.fail('this will fail')
+	endfunction
