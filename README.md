@@ -63,6 +63,10 @@ More information by:
 * :help 'expandtab'
 * :help 'softtabstop'
 
+## Testing
+
+For testing eo-vim plugin we use a [testing framework](https://github.com/thinca/vim-themis) for Vim script, so you can add some tests for your new features with this soft. It will be run by CI.
+
 ##  Contributing
 
 All PRs are welcome. If you are planning to contribute a large patch or to integrate a new tool or some features, please create an issue first to get any upfront questions or design decisions out of the way first. Then, you may fork repository, make changes and send us a pull request.
