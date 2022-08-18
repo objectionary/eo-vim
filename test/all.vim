@@ -2,8 +2,10 @@ let s:suite = themis#suite('Test for my plugin')
 let s:assert = themis#helper('assert')
 
 " Checking correct running of syntax highlighting script
+" let path
+
 function s:source(path)
-  execute ':source' path
+  execute ':source' fnameescape(path)
 endfunction
 
 call s:source('./syntax/eo.vim')
