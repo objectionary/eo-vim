@@ -2,10 +2,11 @@ let s:suite = themis#suite('Test for my plugin')
 let s:assert = themis#helper('assert')
 
 " Checking correct running of syntax highlighting script
-function s:source()
-  execute ':source ./syntax/eo.vim'
+function s:source(path)
+  execute ':source' path
 endfunction
 
+call s:source('./syntax/eo.vim')
 " These are trial tests for checking CI working
 " They will be expand in the future contributes
 " You are welcome to add them
