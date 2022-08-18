@@ -12,6 +12,6 @@ function s:suite.my_test_2()
   call s:assert.equals(8, 2 * 4)
 endfunction
 
-function s:suite.my_test_2()
+function s:suite.my_test_3()
   call s:assert.equals(4, 10 - 6)
 endfunction
