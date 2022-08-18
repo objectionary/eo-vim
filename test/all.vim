@@ -2,10 +2,15 @@ let s:suite = themis#suite('Test for my plugin')
 let s:assert = themis#helper('assert')
 
 " Checking correct running of syntax highlighting script
-let path = '.'
+" let path = '.'
 
 function! s:source(path) abort
-  execute ':source' fnameescape(path)
+  try
+    execute ':source' fnameescape(a:path)
+  catch /^Vim\%((\a\+)\)\=:E121:/
+    " NOTE: workaround for `E121: Undefined variable: s:save_cpo`
+    execute ':source' fnameescape(a:path)
+  endtry
 endfunction
 
 call s:source('./syntax/eo.vim')
