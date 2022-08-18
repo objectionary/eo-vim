@@ -1,8 +1,3 @@
-Describe vim-eo.vim
-    Before all
-        syntax enable
-    End
-
 let s:suite = themis#suite('Test for my plugin')
 let s:assert = themis#helper('assert')
 
