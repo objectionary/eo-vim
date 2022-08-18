@@ -5,7 +5,7 @@
 
 ![Lines of code](https://img.shields.io/tokei/lines/github/ivan-egorov42/vim-eo)
 ![Hits-of-Code](https://hitsofcode.com/github/ivan-egorov42/vim-eo)
-![Build](https://img.shields.io/github/workflow/status/ivan-egorov42/vim-eo/CI)
+[![CI](https://github.com/ivan-egorov42/vim-eo/actions/workflows/main.yml/badge.svg)](https://github.com/ivan-egorov42/vim-eo/actions/workflows/main.yml)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/objectionary/eo/blob/master/LICENSE.txt)
 
 # Vim plugin for EO programs
