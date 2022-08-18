@@ -5,7 +5,7 @@ let s:assert = themis#helper('assert')
 " They will be expand in the future contributes
 " You are welcome to add them
 
-execute ':source ../../syntax/eo.vim'
+execute ':source ../../../syntax/eo.vim'
 
 function s:suite.my_test_1()
   call s:assert.equals(3, 1 + 2)
