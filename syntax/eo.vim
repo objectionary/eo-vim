@@ -1,11 +1,9 @@
 " Vim plugin file
 " Language:    Eolang 
 " Maintainer:  
-" Last Change: 01/08/2022
+" Last Change: 18/08/2022
 " Version:     0.0.0
 " URL:         
-
-mistake
 
 " Checking for rewriting
     if exists("b:current_syntax")
