@@ -50,6 +50,7 @@ jobs:
 
           token: # optional, default is ${{ github.token }}
           
+      # - name: Running syntax script
       - name: Checkout themis.vim
         uses: actions/checkout@v2
         with:
