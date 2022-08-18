@@ -64,7 +64,7 @@ jobs:
         env:
           THEMIS_VIM: ${{ steps.vim.outputs.executable }}
           THEMIS_PROFILE: profile.txt
-        run: ./vim-themis/bin/themis ./test/all.vimspec
+        run: ./vim-themis/bin/themis ./test
       - uses: actions/setup-python@v1
       - name: Report coverage
         run: |
