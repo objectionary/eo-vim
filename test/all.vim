@@ -4,6 +4,9 @@ let s:assert = themis#helper('assert')
 " These are trial tests for checking CI working
 " They will be expand in the future contributes
 " You are welcome to add them
+
+execute ':source ../syntax/eo.vim'
+
 function s:suite.my_test_1()
   call s:assert.equals(3, 1 + 2)
 endfunction
