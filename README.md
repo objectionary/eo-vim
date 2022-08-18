@@ -1,7 +1,6 @@
 <img src="https://www.yegor256.com/images/books/elegant-objects/cactus.svg" height="92px" />
 
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
-[![DevOps By Rultor.com](http://www.rultor.com/b/objectionary/eo)](http://www.rultor.com/p/objectionary/eo)
 
 ![Lines of code](https://img.shields.io/tokei/lines/github/ivan-egorov42/vim-eo)
 [![Hits-of-Code](https://hitsofcode.com/github/ivan-egorov42/vim-eo)](https://hitsofcode.com/github/ivan-egorov42/vim-eo/view)
