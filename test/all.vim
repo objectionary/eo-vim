@@ -2,7 +2,7 @@ let s:suite = themis#suite('Test for my plugin')
 let s:assert = themis#helper('assert')
 
 " Checking correct running of syntax highlighting script
-let path
+let path = '.'
 
 function s:source(path)
   execute ':source' fnameescape(path)
