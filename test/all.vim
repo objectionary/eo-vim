@@ -14,7 +14,7 @@ endfunction
 call s:source('./syntax/eo.vim')
 call s:source('./ftdetect/eo.vim')
 " These are trial tests for checking CI working
-" They will be expand in the future contributes
+" They will be expanded in the future contributions
 " You are welcome to add them
 function s:suite.my_test_1()
   call s:assert.equals(3, 1 + 2)
