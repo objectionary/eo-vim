@@ -66,14 +66,3 @@ jobs:
           THEMIS_PROFILE: profile.txt
         run: |
           ./vim-themis/bin/themis ./test/all.vim
-      - uses: actions/setup-python@v1
-      - name: Report coverage
-        run: |
-          # https://github.com/Vimjas/covimerage/issues/95
-          pip install 'click<8.0.0'
-          pip install covimerage
-          covimerage write_coverage profile.txt
-          coverage report
-          coverage xml
-      - name: Upload coverage to codecov
-        uses: codecov/codecov-action@v1
