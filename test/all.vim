@@ -4,7 +4,7 @@ let s:assert = themis#helper('assert')
 " Checking correct running of syntax highlighting script
 let path = '.'
 
-function s:source(path)
+function! s:source(path) abort
   execute ':source' fnameescape(path)
 endfunction
 
