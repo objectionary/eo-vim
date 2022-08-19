@@ -54,7 +54,7 @@
     " TODO: other types //optional
     syntax match eoInteger "[1-9][0-9]*" 
     syntax match eoFloat   "\v<\d+\.\d+>" 
-    syntax match eoBinary "\v[0-9A-F][0-9A-F]\-[\-0-9A-F]*"
+    syntax match eoBinary  "\v[0-9A-F][0-9A-F]\-[\-0-9A-F]*"
      
     
     
@@ -72,14 +72,14 @@
     highlight DotName ctermfg=LightBlue guifg=LightBlue
     hi def link eoDotName DotName
     
-    highlight Title ctermfg=Green guifg=Green guifg=LightYellow gui=bold cterm=bold
-    highlight Name ctermfg=LightYellow guifg=LightYellow 
-    hi def link eoDefaultName  Name
-    hi def link eoAbstractName Title 
+    highlight AbstractName ctermfg=Green guifg=Green guifg=LightYellow gui=bold cterm=bold
+    highlight ObjectName ctermfg=LightYellow guifg=LightYellow 
+    hi def link eoDefaultName  ObjectName
+    hi def link eoAbstractName AbstractName 
     
     highlight Define ctermfg=LightRed guifg=LightRed
     hi def link eoKeyMetas Define
-    hi def link eoMetas Operator
+    hi def link eoMetas Statement
     
     " highlight default
     hi def link eoOperator  NONE
