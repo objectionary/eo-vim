@@ -11,7 +11,7 @@
     endif
     
     " Match language specific keywords
-    syntax keyword eoKeyMetas contained alias package rt version home junit unit
+    syntax keyword eoKeyMetas contained alias package rt version home junit unit architect
     syntax keyword eoBoolean TRUE FALSE 
     
     " Match String
