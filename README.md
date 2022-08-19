@@ -17,7 +17,7 @@ This plugin adds EO language support for Vim, with the following main features:
 
 ## Installation
 
-The simplest way to install vim-eo plugin is adding it to the standard runtime path like this:
+The simplest way to install eo-vim plugin is adding it to the standard runtime path like this:
 
 #### 1st Step
  
@@ -30,20 +30,20 @@ else you can skip this step
 #### 2nd Step
 ``` 
 cd ~/.vim/pack/myplugins/start
-git clone https://github.com/ivan-egorov42/vim-eo
+git clone https://github.com/ivan-egorov42/eo-vim
 ``` 
 
 #### But also you can use some popular package managers:
 
 * [Vim 8 packages](http://vimhelp.appspot.com/repeat.txt.html#packages)
-  * `git clone https://github.com/ivan-egorov42/vim-eo.git ~/.vim/pack/plugins/start/vim-eo`
+  * `git clone https://github.com/ivan-egorov42/eo-vim.git ~/.vim/pack/plugins/start/eo-vim`
 * [Neovim packages](https://neovim.io/doc/user/repeat.html#packages)
-  * `git clone https://github.com/ivan-egorov42/vim-eo.git ~/.local/share/nvim/site/pack/plugins/start/vim-eo`
+  * `git clone https://github.com/ivan-egorov42/eo-vim.git ~/.local/share/nvim/site/pack/plugins/start/eo-vim`
 * [Pathogen](https://github.com/tpope/vim-pathogen)
-  * `git clone https://github.com/ivan-egorov42/vim-eo.git ~/.vim/bundle/vim-eo`
+  * `git clone https://github.com/ivan-egorov42/eo-vim.git ~/.vim/bundle/eo-vim`
 * [Vundle](https://github.com/VundleVim/Vundle.vim)
-  * `git clone https://github.com/ivan-egorov42/vim-eo.git ~/.vim/bundle/vim-eo`
-  *  add `Plugin 'vim-eo'` to your `~/.vimrc` and run `PluginInstall`.
+  * `git clone https://github.com/ivan-egorov42/eo-vim.git ~/.vim/bundle/eo-vim`
+  *  add `Plugin 'eo-vim'` to your `~/.vimrc` and run `PluginInstall`.
 
 ## Using tabulation
 
