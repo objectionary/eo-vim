@@ -62,6 +62,10 @@ More information by:
 * :help 'expandtab'
 * :help 'softtabstop'
 
+## Highlight setting
+
+If you want to change colors in vim as you wish, you can see the list of highlight groups [here](https://github.com/ivan-egorov42/eo-vim/blob/master/syntax/README.md).
+
 ## Testing
 
 For testing eo-vim plugin we use a [testing framework](https://github.com/thinca/vim-themis) for Vim script, so you can add some tests for your new features with this soft. It will be run by CI.
