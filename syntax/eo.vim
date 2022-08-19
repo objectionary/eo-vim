@@ -52,10 +52,13 @@
     syntax match eoOperator "\v-\="
     
     " TODO: Numbers //optional 
-    syntax match eoInteger "\v<\d+>" 
+    syntax match eoInteger "[1-9][0-9]*"
+    "\v<\d+>" 
     syntax match eoFloat   "\v<\d+\.\d+>" 
     " syntax match eoExponent "\v<\d*\.?\d+([Ee]-?)?\d+>"
-    " syntax match eoBinary   "\v<0b[01]+>"
+     syntax match eoBinary "\v[0-9A-F][0-9A-F]\-[\-0-9A-F]*" "contains=eoInteger
+     "\v[0-9A-F][[0-9A-F]\-+[0-9A-F]]*[0-9A-F]" contains=eoInteger
+     
     
     
     
@@ -85,6 +88,11 @@
     hi def link eoOperator  NONE
     hi def link eoBoolean   Boolean
     hi def link todoComment Todo 
+
+    highlight Number ctermfg=LightGreen guifg=LightGreen
+    hi def link eoBinary  Boolean
+    hi def link eoInteger Number
+    hi def link eoFloat   Number 
     
     " +|+|+|+|+|+|+|+ End highlight +|+|+|+|+|+|+|+ "
 let b:current_syntax="eo"
