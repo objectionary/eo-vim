@@ -1,7 +1,7 @@
 " Vim plugin file
 " Language:    Eolang 
 " Maintainer:  
-" Last Change: 18/08/2022
+" Last Change: 19/08/2022
 " Version:     0.0.0
 " URL:         
 
@@ -51,13 +51,10 @@
     syntax match eoOperator "\v\+\="
     syntax match eoOperator "\v-\="
     
-    " TODO: Numbers //optional 
-    syntax match eoInteger "[1-9][0-9]*"
-    "\v<\d+>" 
+    " TODO: other types //optional
+    syntax match eoInteger "[1-9][0-9]*" 
     syntax match eoFloat   "\v<\d+\.\d+>" 
-    " syntax match eoExponent "\v<\d*\.?\d+([Ee]-?)?\d+>"
-     syntax match eoBinary "\v[0-9A-F][0-9A-F]\-[\-0-9A-F]*" "contains=eoInteger
-     "\v[0-9A-F][[0-9A-F]\-+[0-9A-F]]*[0-9A-F]" contains=eoInteger
+    syntax match eoBinary "\v[0-9A-F][0-9A-F]\-[\-0-9A-F]*"
      
     
     
