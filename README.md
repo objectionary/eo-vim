@@ -18,20 +18,16 @@ This plugin adds EO language support for Vim, with the following main features:
 ## Installation
 
 The simplest way to install eo-vim plugin is adding it to the standard runtime path like this:
-
-#### 1st Step
  
 If you don't have "start" directory in ~/.vim, you can run this:
 ``` 
 mkdir -p ~/.vim/pack/myplugins/start
 ``` 
-else you can skip this step
-
-#### 2nd Step
-``` 
-cd ~/.vim/pack/myplugins/start
+else you can skip this. Clone the repo to your directory
+```
 git clone https://github.com/ivan-egorov42/eo-vim
 ``` 
+Then you can use vim higlighting for EO programs
 
 #### But also you can use some popular package managers:
 
@@ -50,7 +46,6 @@ git clone https://github.com/ivan-egorov42/eo-vim
 If you use tabs in vim, it is necessary to set the 'expandtab' option: `:set expandtab` due to compiler specifics. Also, the following line will be useful if you don't want to set this every time you start the vim:
 ```
 autocmd BufEnter *.eo set ai ts=2 st=2 expandtab
-
 ```
 You can add it to your `$HOME/.vimrc` configuration file. This will work only with `.eo` files. 
 
