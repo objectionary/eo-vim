@@ -48,6 +48,34 @@ More information by:
 
 If you want to change colors in vim as you wish, you can see the list of highlight groups [here](https://github.com/objectionary/eo-vim/blob/master/syntax/README.md).
 
+## Highlight setting
+
+You can change colors in syntax highlighting on your own by using `highlight` command in vim, for example:
+
+```
+:highlight Comment term=bold ctermfg=Cyan guifg=#80a0ff gui=bold
+```
+
+Here is the list of highlight groups and examples in code:
+
+```
+Group          | Example
+-------------- | ---------------
+Keyword        | @, &, $, ^
+Comment        | #Here is comment
+Number         | Ints and floats
+String         | "Hello, world"
+Boolean        | TRUE, FALSE and bytes literals
+Todo           | TODO FIXME NOTE
+DotName        | .plus .write .smth etc.
+ObjectName     | All objects except abstract and dot-notation
+AbstractName   | Abstact objects
+Define         | alias package rt etc.
+Statement      | +rt jvm org.eolang...
+```
+
+More information by `:highlight` and `:help 'highlight'`
+
 ## How to Contribute
 
 For testing eo-vim plugin we use a [testing framework](https://github.com/thinca/vim-themis) for Vim script, so you can add some tests for your new features with this soft. It will be run by CI.
