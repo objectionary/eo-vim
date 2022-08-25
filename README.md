@@ -12,7 +12,7 @@ This plugin makes [Vim](https://www.vim.org) highlight syntax in [EO](https://ww
 The simplest way to install is by adding it to the standard Vim runtime path:
 
 ```
-git clone https://github.com/objectionary/eo-vim ~/.vim/pack/myplugins/start
+git clone https://github.com/objectionary/eo-vim.git ~/.vim/pack/plugins/start/eo-vim
 ``` 
 
 However, you can also use some popular package managers:
