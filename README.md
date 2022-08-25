@@ -48,7 +48,7 @@ More information by:
 
 If you want to change colors in vim as you wish, you can see the list of highlight groups [here](https://github.com/objectionary/eo-vim/blob/master/syntax/README.md).
 
-## Highlight setting
+### Highlight setting
 
 You can change colors in syntax highlighting on your own by using `highlight` command in vim, for example:
 
