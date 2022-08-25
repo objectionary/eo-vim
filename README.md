@@ -17,17 +17,11 @@ This plugin adds EO language support for Vim, with the following main features:
 
 ## Installation
 
-The simplest way to install eo-vim plugin is adding it to the standard runtime path like this:
- 
-If you don't have "start" directory in ~/.vim, you can run this:
-``` 
-mkdir -p ~/.vim/pack/myplugins/start
-``` 
-else you can skip this. Clone the repo to your directory
+The simplest way to install eo-vim plugin is adding it to the standard vim runtime path. For example:
 ```
-git clone https://github.com/ivan-egorov42/eo-vim
+git clone https://github.com/ivan-egorov42/eo-vim ~/.vim/pack/myplugins/start
 ``` 
-Then you can use vim higlighting for EO programs
+Then you can use vim higlighting for EO programs.
 
 #### But also you can use some popular package managers:
 
