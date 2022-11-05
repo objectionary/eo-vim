@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Setup Vim
-        uses: rhysd/action-setup-vim@v1.2.12
+        uses: rhysd/action-setup-vim@v1.2.13
         with:
           version: stable # optional, default is stable
           neovim: true # optional
