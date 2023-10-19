@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup Vim
         uses: rhysd/action-setup-vim@v1.2.13
         with:
@@ -18,7 +18,7 @@ jobs:
           token: # optional, default is ${{ github.token }}
           
       - name: Checkout themis.vim
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: thinca/vim-themis
           path: vim-themis
