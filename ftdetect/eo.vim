@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.eo set filetype=eo
+au BufRead,BufNewFile *.eo setfiletype eo
