@@ -18,7 +18,7 @@
     syntax region eoString start=/\v"/ skip=/\v\\./ end=/\v"/ fold contains=@Spell
     
     " Match Metas
-    syntax match eoMetas "\v\+.*$" contains=eoKeyMetas
+    syntax match eoMetas "\v^\s*\zs\+.*$" contains=eoKeyMetas
     
     " Match Comment
     syntax keyword todoComment contained TODO FIXME NOTE
@@ -33,7 +33,6 @@
     syntax match eoAbstractName "\v\[.*$" contains=eoOperator
     
     " Special attributes
-    syntax match eoKeyword "\v\&"
     syntax match eoKeyword "\v\@"
     syntax match eoKeyword "\v\$"
     syntax match eoKeyword "\v\^"
@@ -43,9 +42,10 @@
     syntax match eoOperator "\v/"
     syntax match eoOperator "\v\?"
     syntax match eoOperator "\v\>"
-    syntax match eoOperator "\v\<"
+    syntax match eoTest     "\v(^|\s)\zs[+-]\>\ze(\s|$)"
+    syntax match eoTest     "\v(^|\s)\zs(\+\+|--)\>\ze(\s|$)"
+    syntax match eoAutoName "\v(^|\s)\zs\>\>\!?\ze(\s|$)"
     syntax match eoOperator "\v\:"
-    syntax match eoOperator "\v\="
     syntax match eoOperator "\v\*\="
     syntax match eoOperator "\v/\="
     syntax match eoOperator "\v\+\="
@@ -83,6 +83,8 @@
     
     " highlight default
     hi def link eoOperator  NONE
+    hi def link eoTest      Special
+    hi def link eoAutoName  Define
     hi def link eoBoolean   Boolean
     hi def link todoComment Todo 
 

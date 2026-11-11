@@ -13,17 +13,60 @@ endfunction
 
 call s:source('./syntax/eo.vim')
 call s:source('./ftdetect/eo.vim')
-" These are trial tests for checking CI working
-" They will be expanded in the future contributions
-" You are welcome to add them
-function s:suite.my_test_1()
-  call s:assert.equals(3, 1 + 2)
+execute 'set runtimepath+=' . fnameescape(getcwd())
+function! s:group(line, needle) abort
+  enew!
+  syntax enable
+  set filetype=eo
+  call setline(1, a:line)
+  syntax sync fromstart
+  return synIDattr(synID(1, stridx(a:line, a:needle) + 1, 1), 'name')
 endfunction
 
-function s:suite.my_test_2()
-  call s:assert.equals(8, 2 * 4)
+function s:suite.colors_auto_name_marker()
+  call s:assert.equals(s:group('42 >> x!', '>>'), 'eoAutoName')
 endfunction
 
-function s:suite.my_test_3()
-  call s:assert.equals(4, 10 - 6)
+function s:suite.colors_test_marker()
+  call s:assert.equals(s:group('true +> stops', '+>'), 'eoTest')
+endfunction
+
+function s:suite.colors_long_test_marker()
+  call s:assert.equals(s:group('1.div 0 ++> stops', '++>'), 'eoTest')
+endfunction
+
+function s:suite.colors_long_test_marker_middle()
+  call s:assert.equals(s:group('1.div 0 --> stops', '-'), 'eoTest')
+endfunction
+
+function s:suite.colors_binding_arrow_as_operator()
+  call s:assert.equals(s:group('42 > x', '>'), 'eoOperator')
+endfunction
+
+function s:suite.keeps_marker_inside_string_plain()
+  call s:assert.equals(s:group('"a +> b" > x', '+>'), 'eoString')
+endfunction
+
+function s:suite.keeps_marker_inside_comment_plain()
+  call s:assert.equals(s:group('# a ++> b', '++>'), 'eoComment')
+endfunction
+
+function s:suite.keeps_marker_after_text_out_of_metas()
+  call s:assert.not_equals(s:group('1.div 0 +> stops', '+>'), 'eoMetas')
+endfunction
+
+function s:suite.colors_line_leading_meta()
+  call s:assert.equals(s:group('+alias org.eolang', 'org'), 'eoMetas')
+endfunction
+
+function s:suite.colors_meta_keyword()
+  call s:assert.equals(s:group('+alias org.eolang', 'alias'), 'eoKeyMetas')
+endfunction
+
+function s:suite.colors_integer()
+  call s:assert.equals(s:group('42', '4'), 'eoInteger')
+endfunction
+
+function s:suite.colors_string()
+  call s:assert.equals(s:group('"hi"', 'h'), 'eoString')
 endfunction
