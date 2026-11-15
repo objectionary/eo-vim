@@ -65,7 +65,7 @@ Keyword        | @, &, $, ^
 Comment        | #Here is comment
 Number         | Ints and floats
 String         | "Hello, world"
-Boolean        | TRUE, FALSE and bytes literals
+Boolean        | true, false and bytes literals
 Todo           | TODO FIXME NOTE
 DotName        | .plus .write .smth etc.
 ObjectName     | All objects except abstract and dot-notation
