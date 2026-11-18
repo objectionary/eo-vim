@@ -27,3 +27,10 @@ endfunction
 function s:suite.my_test_3()
   call s:assert.equals(4, 10 - 6)
 endfunction
+
+function s:suite.ftdetect_keeps_filetype_set_earlier()
+  enew!
+  setfiletype conf
+  doautocmd BufRead foo.eo
+  call s:assert.equals(&filetype, 'conf')
+endfunction
