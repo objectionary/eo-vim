@@ -52,7 +52,7 @@
     syntax match eoOperator "\v-\="
     
     " TODO: other types //optional
-    syntax match eoInteger "[1-9][0-9]*" 
+    syntax match eoInteger "\v<(0|[1-9]\d*)>"
     syntax match eoFloat   "\v<\d+\.\d+>" 
     syntax match eoBinary  "\v[0-9A-F][0-9A-F]\-[\-0-9A-F]*"
      
