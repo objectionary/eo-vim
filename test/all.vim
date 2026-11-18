@@ -77,3 +77,41 @@ function s:suite.ftdetect_keeps_filetype_set_earlier()
   doautocmd BufRead foo.eo
   call s:assert.equals(&filetype, 'conf')
 endfunction
+
+function! s:syntax_at(text, column) abort
+  new
+  try
+    call setline(1, a:text)
+    call s:source('./syntax/eo.vim')
+    return synID(1, a:column, 1)
+  finally
+    bwipeout!
+  endtry
+endfunction
+
+function! s:suite.zero_is_a_number() abort
+  let id = s:syntax_at('0 > zero', 1)
+  call s:assert.equals(synIDattr(id, 'name'), 'eoInteger')
+  call s:assert.equals(synIDattr(synIDtrans(id), 'name'), 'Number')
+endfunction
+
+function! s:suite.integer_literals() abort
+  for literal in ['0', '1', '10', '100', '-0', '-10']
+    let first = literal[0] ==# '-' ? 2 : 1
+    for column in range(first, strlen(literal))
+      let id = s:syntax_at(literal, column)
+      call s:assert.equals(synIDattr(id, 'name'), 'eoInteger', literal)
+    endfor
+  endfor
+endfunction
+
+function! s:suite.zero_in_other_syntax_groups() abort
+  for [text, column, group] in [
+        \ ['item0', 5, 'eoDefaultName'],
+        \ ['0.5', 1, 'eoFloat'],
+        \ ['"0"', 2, 'eoString'],
+        \ ['# 0', 3, 'eoComment']]
+    let id = s:syntax_at(text, column)
+    call s:assert.equals(synIDattr(id, 'name'), group, text)
+  endfor
+endfunction
