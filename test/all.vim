@@ -78,6 +78,30 @@ function s:suite.ftdetect_keeps_filetype_set_earlier()
   call s:assert.equals(&filetype, 'conf')
 endfunction
 
+function s:suite.syntax_keeps_keyword_group_of_colorscheme()
+  highlight Keyword ctermfg=Red
+  let before = synIDattr(synIDtrans(hlID('Keyword')), 'fg', 'cterm')
+  unlet! b:current_syntax
+  call s:source('./syntax/eo.vim')
+  call s:assert.equals(synIDattr(synIDtrans(hlID('Keyword')), 'fg', 'cterm'), before)
+endfunction
+
+function s:suite.syntax_keeps_string_group_of_colorscheme()
+  highlight String ctermfg=Cyan
+  let before = synIDattr(synIDtrans(hlID('String')), 'fg', 'cterm')
+  unlet! b:current_syntax
+  call s:source('./syntax/eo.vim')
+  call s:assert.equals(synIDattr(synIDtrans(hlID('String')), 'fg', 'cterm'), before)
+endfunction
+
+function s:suite.syntax_keeps_number_group_of_colorscheme()
+  highlight Number ctermfg=Yellow
+  let before = synIDattr(synIDtrans(hlID('Number')), 'fg', 'cterm')
+  unlet! b:current_syntax
+  call s:source('./syntax/eo.vim')
+  call s:assert.equals(synIDattr(synIDtrans(hlID('Number')), 'fg', 'cterm'), before)
+endfunction
+
 function! s:syntax_at(text, column) abort
   new
   try
