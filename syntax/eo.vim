@@ -12,7 +12,7 @@
     
     " Match language specific keywords
     syntax keyword eoKeyMetas contained alias package rt version home junit unit architect
-    syntax keyword eoBoolean TRUE FALSE 
+    syntax keyword eoBoolean true false
     
     " Match String
     syntax region eoString start=/\v"/ skip=/\v\\./ end=/\v"/ fold contains=@Spell
