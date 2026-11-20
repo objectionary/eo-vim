@@ -63,6 +63,18 @@ function s:suite.colors_meta_keyword()
   call s:assert.equals(s:group('+alias org.eolang', 'alias'), 'eoKeyMetas')
 endfunction
 
+function s:suite.colors_current_meta_keywords()
+  for name in ['alias', 'architect', 'home', 'package', 'rt', 'spdx', 'tests', 'unlint', 'version']
+    call s:assert.equals(s:group('+' . name . ' x', name), 'eoKeyMetas', name)
+  endfor
+endfunction
+
+function s:suite.does_not_color_retired_meta_keywords()
+  for name in ['junit', 'unit']
+    call s:assert.not_equals(s:group('+' . name . ' x', name), 'eoKeyMetas', name)
+  endfor
+endfunction
+
 function s:suite.colors_integer()
   call s:assert.equals(s:group('42', '4'), 'eoInteger')
 endfunction
